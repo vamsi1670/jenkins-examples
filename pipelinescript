@@ -1,0 +1,8 @@
+node {
+    stage ('version') {
+       git 'https://github.com/wakaleo/game-of-life.git'
+    }
+    stage ('build') {
+       sh 'mvn package '
+    }
+}

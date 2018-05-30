@@ -1,0 +1,24 @@
+ To give the war file to testing team.—
+
+In archiving the artifactr. Go to post build actions and selet the option archiving the artifacts and  Give Relative to pom.xml to ur folder. Come to the console and select the build now option.
+This I snormally used in sprint day builds to archive the artifacrts. Becz they are unstable builds.
+
+How to configure all the builds in a shared drive :-
+Post build actions -> build other projects  or this can also be done using execute shell scripts.
+All the environment variables in the execute shell script can be used by using $ symbol.
+
+Parameterized builds: 
+Check the -> this project is parameterized in the general tab option in the configure project.
+Take a new build and select the free style project select the parameterized build options in the general option of configure project.
+Select source and destination as string parameters.
+In the build trigger option select the “execute shell ” option and use the command cp $ource $destination 
+Save the project and select the build with parameters option and give all the parameters specified in the location.
+After the build is successful , u can observe the test.xml file is created in the location specified.
+
+Trigger parameterized builds from the other projects.
+Projects to build -> copythe war file.
+Predefined parameters> give all the parameters specified 
+Here it is source and destination.
+
+Pipeline build.:- Writing a pipeline script and placing  the Jenkins file  in the git hub .
+

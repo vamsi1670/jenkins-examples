@@ -1,0 +1,11 @@
+def builds=[]
+def job=jenkins.model.jenkins.instance.getItem(job-name)
+Job.builds.each{
+def build=it
+if (it.getResult().toString()).equals("SUCCESS"))
+{
+it badgeActions.each
+{ builds.add(builddisplayName[1..-1]) }
+}
+}
+builds.unique();
